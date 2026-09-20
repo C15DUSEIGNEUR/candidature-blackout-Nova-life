@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidature — Rejoindre le gang</title>
+<style>
+:root{--bg:#080808;--card:#111;--card2:#161616;--text:#f4f4f4;--muted:#999;--accent:#d41414;--accent2:#ff3030;--border:#292929}
+*{box-sizing:border-box} body{margin:0;background:#080808;color:var(--text);font-family:Inter,Arial,sans-serif;min-height:100vh;position:relative}
+body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(8,8,8,.72),rgba(8,8,8,.82)),url('data:image/png;base64,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');background-repeat:no-repeat;background-position:center;background-size:min(560px,70vw);opacity:.42;filter:drop-shadow(0 0 28px rgba(0,120,255,.22));pointer-events:none;z-index:-1}
+.container{width:min(920px,92%);margin:0 auto;padding:45px 0 70px}
+.header{text-align:center;margin-bottom:32px}.badge{display:inline-block;color:#ff5a5a;border:1px solid #5c2020;background:#1b0b0b;border-radius:999px;padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+h1{font-size:clamp(32px,6vw,54px);margin:16px 0 8px}.header p{color:var(--muted);margin:0;font-size:15px}
+.card{background:linear-gradient(145deg,#121212,#0d0d0d);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:0 20px 60px #0008}
+.section{padding:4px 0 25px}.section+.section{border-top:1px solid var(--border);padding-top:28px}
+.section h2{font-size:18px;margin:0 0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}.field.full{grid-column:1/-1}label{display:block;font-size:13px;font-weight:700;margin-bottom:8px} .optional{color:#777;font-weight:400}
+input,textarea,select{width:100%;background:var(--card2);border:1px solid var(--border);border-radius:11px;color:var(--text);padding:13px 14px;outline:none;font:inherit;transition:.2s}
+textarea{min-height:115px;resize:vertical}input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #d4141420}
+.hint{font-size:12px;color:#777;margin-top:7px}
+.checkbox{display:flex;gap:10px;align-items:flex-start;color:#aaa;font-size:13px;line-height:1.5}.checkbox input{width:auto;margin-top:3px;accent-color:var(--accent)}
+button{width:100%;border:0;border-radius:12px;padding:15px;background:linear-gradient(135deg,#0866ff,#1495ff);color:white;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 10px 25px #0866ff45}button:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 12px 30px #0866ff60}
+.success{display:none;text-align:center;padding:35px}.success h2{margin-top:0;color:#ff5a5a}.success p{color:#aaa}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.card{padding:20px}.container{padding-top:25px}}
+</style>
+</head>
+<body>
+<main class="container">
+<header class="header">
+  <span class="badge">Candidature RP</span>
+  <h1>Rejoindre le gang</h1>
+  <p>Prends le temps de répondre sérieusement à chaque question.</p>
+</header>
+
+<section class="card" id="formCard">
+<form id="applicationForm">
+  <div class="section">
+    <h2>👤 Informations IRL</h2>
+    <div class="grid">
+      <div class="field"><label for="pseudo">Prénom / Pseudo</label><input id="pseudo" name="pseudo" required placeholder="Ton prénom ou pseudo"></div>
+      <div class="field"><label for="age">Âge IRL</label><input id="age" name="age" type="number" min="13" max="99" required placeholder="Ex. 18"></div>
+      <div class="field full"><label for="experience">Depuis combien de temps fais-tu du RP ?</label><input id="experience" name="experience" required placeholder="Ex. 2 ans"></div>
+      <div class="field full"><label for="availability">Quelles sont tes disponibilités ?</label><textarea id="availability" name="availability" required placeholder="Ex. Tous les soirs à partir de 18h..."></textarea></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🎭 Informations RP</h2>
+    <div class="grid">
+      <div class="field"><label for="rpname">Nom et prénom RP</label><input id="rpname" name="rpname" required placeholder="Ex. Tony Rossi"></div>
+      <div class="field"><label for="rpage">Âge RP</label><input id="rpage" name="rpage" type="number" min="13" max="100" required placeholder="Ex. 27"></div>
+      <div class="field full"><label for="story">Histoire de ton personnage</label><textarea id="story" name="story" required placeholder="Raconte brièvement son parcours..."></textarea></div>
+      <div class="field full"><label for="why">Pourquoi ton personnage souhaite-t-il rejoindre le gang ?</label><textarea id="why" name="why" required></textarea></div>
+      <div class="field full"><label for="motivation">Quelles sont ses motivations ?</label><textarea id="motivation" name="motivation" required></textarea></div>
+      <div class="field"><label for="qualities">Quelles sont ses qualités ?</label><textarea id="qualities" name="qualities" required></textarea></div>
+      <div class="field"><label for="flaws">Quels sont ses défauts ?</label><textarea id="flaws" name="flaws" required></textarea></div>
+      <div class="field full"><label for="tension">Comment réagirait-il face à une situation tendue ?</label><textarea id="tension" name="tension" required></textarea></div>
+      <div class="field full"><label for="past">A-t-il déjà eu une expérience dans un gang / une organisation RP ?</label><textarea id="past" name="past" required></textarea></div>
+      <div class="field full"><label for="contribution">Que pourrait-il apporter au gang ?</label><textarea id="contribution" name="contribution" required></textarea></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🎬 Mise en situation RP</h2>
+    <div class="field">
+      <label for="scenario">Un membre du gang te demande de l'accompagner pour une mission, mais tu ne connais pas les détails. Comment ton personnage réagit-il ?</label>
+      <textarea id="scenario" name="scenario" required></textarea>
+    </div>
+    <div class="field">
+      <label for="scenario2">Un autre membre provoque ton personnage devant plusieurs personnes. Comment réagit-il sans nuire au RP du groupe ?</label>
+      <textarea id="scenario2" name="scenario2" required></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📩 Pour terminer</h2>
+    <div class="field"><label for="presentation">Présente ton personnage en quelques lignes.</label><textarea id="presentation" name="presentation" required></textarea></div>
+    <div class="field"><label for="accept">Pourquoi devrait-on accepter ta candidature ?</label><textarea id="accept" name="accept" required></textarea></div>
+    <label class="checkbox"><input type="checkbox" required> <span>Je confirme que les informations fournies sont sincères et que je respecte les règles du serveur.</span></label>
+  </div>
+
+  <button type="submit">Envoyer ma candidature</button>
+</form>
+
+<div class="success" id="success">
+  <h2>✅ Candidature envoyée</h2>
+  <p>Merci ! Ta candidature a bien été prise en compte.</p>
+</div>
+</section>
+</main>
+
+<script>
+document.getElementById('applicationForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  this.style.display='none';
+  document.getElementById('success').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
